@@ -4,9 +4,9 @@
 curl -X POST "https://gachoixombau.com/api/auth/register" \
   -H "Content-Type: application/json" \
   -d '{
-    "username": "anhut7979",
-    "password": "anhut7979",
-    "email": "anhut7979@example.com"
+    "username": "xombau",
+    "password": "xombau123",
+    "email": "xombau123@example.com"
   }'
 
 # Cách 2: Với email tùy chỉnh (thay YOUR_EMAIL@example.com)
@@ -28,4 +28,4 @@ curl -X POST "https://gachoixombau.com/api/auth/register" \
   }' | jq '.'
 
 # Cách 4: Một dòng (dễ copy)
-curl -X POST "https://gachoixombau.com/api/auth/register" -H "Content-Type: application/json" -d '{"username":"anhut7979","password":"anhut7979","email":"anhut7979@example.com"}'
+curl -X POST "https://gachoixombau.com/api/auth/register" -H "Content-Type: application/json" -d '{"username":"xombau","password":"xombau123","email":"xombau123@example.com"}'
