@@ -1,7 +1,7 @@
 # Lệnh curl để đăng ký tài khoản
 
 # Cách 1: Với email mặc định
-curl -X POST "https://gachoichu5.com/api/auth/register" \
+curl -X POST "https://gachoixombau.com/api/auth/register" \
   -H "Content-Type: application/json" \
   -d '{
     "username": "anhut7979",
@@ -10,7 +10,7 @@ curl -X POST "https://gachoichu5.com/api/auth/register" \
   }'
 
 # Cách 2: Với email tùy chỉnh (thay YOUR_EMAIL@example.com)
-curl -X POST "https://gachoichu5.com/api/auth/register" \
+curl -X POST "https://gachoixombau.com/api/auth/register" \
   -H "Content-Type: application/json" \
   -d '{
     "username": "anhut7979",
@@ -19,7 +19,7 @@ curl -X POST "https://gachoichu5.com/api/auth/register" \
   }'
 
 # Cách 3: Format đẹp hơn với jq (nếu đã cài jq)
-curl -X POST "https://gachoichu5.com/api/auth/register" \
+curl -X POST "https://gachoixombau.com/api/auth/register" \
   -H "Content-Type: application/json" \
   -d '{
     "username": "anhut7979",
@@ -28,4 +28,4 @@ curl -X POST "https://gachoichu5.com/api/auth/register" \
   }' | jq '.'
 
 # Cách 4: Một dòng (dễ copy)
-curl -X POST "https://gachoichu5.com/api/auth/register" -H "Content-Type: application/json" -d '{"username":"anhut7979","password":"anhut7979","email":"anhut7979@example.com"}'
+curl -X POST "https://gachoixombau.com/api/auth/register" -H "Content-Type: application/json" -d '{"username":"anhut7979","password":"anhut7979","email":"anhut7979@example.com"}'

@@ -294,12 +294,12 @@ const ViewerPage = () => {
           <div className="header-content">
             <div className="logo-section">
               <img
-                src="https://res.cloudinary.com/duklfdbqf/image/upload/v1770725136/a721f7b1-7da1-4feb-9b68-6f32af38d312_estzs6.png"
-                alt="Gà Chọi Chú 5"
+                src="https://res.cloudinary.com/duklfdbqf/image/upload/v1775980884/z7717265863028_a76f1d37e4de786693f363c34c57843b_f7kiq3.jpg"
+                alt="Gà Chọi Xóm Bầu"
                 className="logo"
               />
               <div className="site-title">
-                <h1>Gà Chọi Chú 5</h1>
+                <h1>Gà Chọi Xóm Bầu</h1>
                 <p className="subtitle">Tinh Hoa Việt</p>
               </div>
             </div>
@@ -370,7 +370,7 @@ const ViewerPage = () => {
                 {server}
               </button>
             ))}
-            <a href="tel:0368113370" className="phone-btn">
+            <a href="tel:0354596261" className="phone-btn">
               📞
             </a>
           </div>
@@ -395,8 +395,8 @@ const ViewerPage = () => {
             ) : (
               <div className="video-placeholder">
                 <img
-                  src="https://res.cloudinary.com/duklfdbqf/image/upload/v1770725127/z7512122955396_32daced5afd85f79160fc3b70904f078_zv7cw5.jpg"
-                  alt="Gà Chọi Chú 5"
+                  src="https://res.cloudinary.com/duklfdbqf/image/upload/v1775980790/Gemini_Generated_Image_exktyexktyexktye_j9by4s.png"
+                  alt="Gà Chọi Xóm Bầu"
                   className="cover-image"
                 />
                 <div className="play-button-overlay">
@@ -449,15 +449,15 @@ const ViewerPage = () => {
           <h2 className="section-title">Kết Nối Đam Mê</h2>
           <div className="contact-card">
             <div className="phone-display">
-              <a href="tel:0368113370" className="phone-number">
-                0368113370
+              <a href="tel:0354596261" className="phone-number">
+                0354596261
               </a>
               <p className="contact-label">Hotline/Zalo liên hệ</p>
             </div>
 
             <div className="social-links">
               <a
-                href="https://zalo.me/0368113370"
+                href="https://zalo.me/0354596261"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-btn zalo-personal"
@@ -498,10 +498,10 @@ const ViewerPage = () => {
 
             {/* Google Map Section */}
             {/* <div className="map-section">
-              <h3 className="map-title">📍 Vị Trí Gà Chọi Chú 5</h3>
+              <h3 className="map-title">📍 Vị Trí Gà Chọi Xóm Bầu</h3>
               <div className="address-display">
                 <p className="address-text">
-                  Địa chỉ: Ngọc Lâm, Hòa Mỹ Tây, Tây Hòa, Phú Yên
+                  Địa chỉ: Thôn Mỹ Xuân 2, xã Hoà Thịnh, Tây Hoà, Phú Yên (Daklak mới)
                 </p>
               </div>
               <div className="map-button-container">
@@ -550,7 +550,7 @@ const ViewerPage = () => {
           <div className="branding-container">
             <img 
               src="/thuonghieu.jpg" 
-              alt="Thành tích và giải thưởng Gà Chọi Chú 5"
+              alt="Thành tích và giải thưởng Gà Chọi Xóm Bầu"
               className="branding-image"
               loading="lazy"
             />
@@ -564,13 +564,13 @@ const ViewerPage = () => {
             <h3>Thông Tin Chuyển Khoản</h3>
             <div className="bank-details">
               <p>
-                <strong>AGRIBANK</strong>
+                <strong>Sacombank</strong>
               </p>
               <p>
-                Tên người nhận: <strong>LUU THI THU</strong>
+                Tên người nhận: <strong>Trần Thanh Phong</strong>
               </p>
               <p>
-                : <strong>4610205291500</strong>
+                : <strong>050127110287</strong>
               </p>
               <button className="btn-copy" onClick={copyBankAccount}>
                 📋 Sao chép STK
@@ -617,7 +617,7 @@ const ViewerPage = () => {
           </h2>
           <p className="archive-desc">
             Nơi lưu trữ các video vần xổ gà chọi được quay trực tiếp hàng ngày
-            18h tại Ngọc Lâm, Hòa Mỹ Tây, Tây Hòa, Phú Yên
+            18h tại Thôn Mỹ Xuân 2, xã Hoà Thịnh, Tây Hoà, Phú Yên (Daklak mới)
           </p>
 
           {/* Admin: Upload Video Button */}
@@ -646,7 +646,7 @@ const ViewerPage = () => {
                     <img
                       src={
                         recording.thumbnailUrl ||
-                        "https://res.cloudinary.com/duklfdbqf/image/upload/v1770725127/z7512122955396_32daced5afd85f79160fc3b70904f078_zv7cw5.jpg"
+                        "https://res.cloudinary.com/duklfdbqf/image/upload/v1775980790/Gemini_Generated_Image_exktyexktyexktye_j9by4s.png"
                       }
                       alt={recording.title}
                     />
@@ -709,7 +709,7 @@ const ViewerPage = () => {
               </button>
               <div className="modal-header">
                 <img
-                  src="https://res.cloudinary.com/duklfdbqf/image/upload/v1770725136/a721f7b1-7da1-4feb-9b68-6f32af38d312_estzs6.png"
+                  src="https://res.cloudinary.com/duklfdbqf/image/upload/v1775980884/z7717265863028_a76f1d37e4de786693f363c34c57843b_f7kiq3.jpg"
                   alt="Logo"
                   className="modal-logo"
                 />
@@ -718,25 +718,25 @@ const ViewerPage = () => {
               <div className="modal-body">
                 <p>
                   • Chào mừng bạn đến với{" "}
-                  <strong>Gà Chọi Chú 5</strong> (Gà Chọi Chú 5) nơi tạo ra sân chơi
-                  phục vụ niềm đam mê gà đòn cho anh em 24/7. Gà Chọi Chú 5 là CLB gà chọi
+                  <strong>Gà Chọi Xóm Bầu</strong> (Gà Chọi Xóm Bầu) nơi tạo ra sân chơi
+                  phục vụ niềm đam mê gà đòn cho anh em 24/7. Gà Chọi Xóm Bầu là CLB gà chọi
                   hàng đầu tại Phú Yên.
                 </p>
                 <p>
-                  • Tại Gà Chọi Chú 5 bạn có thể tìm hiểu về kiến
+                  • Tại Gà Chọi Xóm Bầu bạn có thể tìm hiểu về kiến
                   thức về gà đòn, hay đơn giản là thưởng thức những video xổ gà
-                  trong những lúc rảnh rỗi. Gà Chọi Chú 5 sẽ đưa đến cho bạn những thông
+                  trong những lúc rảnh rỗi. Gà Chọi Xóm Bầu sẽ đưa đến cho bạn những thông
                   tin mới nhất về giống gà đòn, kinh nghiệm chăm sóc gà, cách
                   huấn luyện gà chọi và nhiều hơn thế nữa.
                 </p>
                 <p>
-                  • <strong>Gà Chọi Chú 5</strong> còn cung cấp con
+                  • <strong>Gà Chọi Xóm Bầu</strong> còn cung cấp con
                   giống gà đòn cho những ai đang quan tâm đến việc nuôi gà đòn.
-                  Gà Chọi Chú 5 cam kết chất lượng và uy tín.
+                  Gà Chọi Xóm Bầu cam kết chất lượng và uy tín.
                 </p>
                 <div className="intro-images">
                   <img
-                    src="https://res.cloudinary.com/duklfdbqf/image/upload/v1770725127/z7512122955396_32daced5afd85f79160fc3b70904f078_zv7cw5.jpg"
+                    src="https://res.cloudinary.com/duklfdbqf/image/upload/v1775980790/Gemini_Generated_Image_exktyexktyexktye_j9by4s.png"
                     alt="CLB Gà Chọi"
                   />
                 </div>
@@ -793,24 +793,24 @@ const ViewerPage = () => {
         <div className="container">
           <div className="footer-grid">
             <div className="footer-col">
-              <h3>Gà Chọi Chú 5</h3>
+              <h3>Gà Chọi Xóm Bầu</h3>
               <ul>
                 <li>• Vần xổ gà trực tiếp 18h hàng ngày</li>
                 <li>• Giao lưu mua bán gà chọi đi các tỉnh</li>
               </ul>
               <h3>Chuyển Khoản</h3>
-              <p>🏦 agribank</p>
+              <p>🏦 Sacombank</p>
               <p>
-                💳 STK: <strong>0368113370</strong>
+                💳 STK: <strong>0354596261</strong>
               </p>
-              <p>👤LUU THI THU</p>
+              <p>👤Trần Thanh Phong</p>
             </div>
             <div className="footer-col">
               <h3>Liên Hệ</h3>
               <h3>
-                <a href="tel:0368113370">📞 0368113370</a>
+                <a href="tel:0354596261">📞 0354596261</a>
               </h3>
-              <p>📍 Ngọc Lâm, Hòa Mỹ Tây, Tây Hòa, Phú Yên</p>
+              <p>📍 Thôn Mỹ Xuân 2, xã Hoà Thịnh, Tây Hoà, Phú Yên (Daklak mới)</p>
               <div className="social-links" style={{ marginTop: "15px" }}>
                 <a
                   href="https://zalo.me/g/xaaxlh742"
@@ -850,7 +850,7 @@ const ViewerPage = () => {
               <h3>Quy Định</h3>
               <ul>
                 <li>
-                  • Website Gà Chọi Chú 5 hoạt động với hình thức
+                  • Website Gà Chọi Xóm Bầu hoạt động với hình thức
                   giải trí, vui lòng không cá độ dưới mọi hình thức vi phạm pháp
                   luật Việt Nam
                 </li>
@@ -867,7 +867,7 @@ const ViewerPage = () => {
             >
               🎨 Thiết kế bởi Anh Cương  - ☎️ 0387683857
             </p>
-            <p>Bản quyền thuộc về Gà Chọi Chú 5 © 2025</p>
+            <p>Bản quyền thuộc về Gà Chọi Xóm Bầu © 2025</p>
           </div>
         </div>
       </footer>
@@ -932,7 +932,7 @@ const ViewerPage = () => {
 
       {/* Floating Action Buttons */}
       <div className="floating-buttons">
-        <a href="tel:0368113370" className="fab-btn fab-phone" title="Gọi Ngay">
+        <a href="tel:0354596261" className="fab-btn fab-phone" title="Gọi Ngay">
           <span className="fab-icon">
             <img
               src="https://res.cloudinary.com/duklfdbqf/image/upload/v1764553112/yellow-phone-icon-11_pypubp.png"
@@ -942,7 +942,7 @@ const ViewerPage = () => {
           <span className="fab-text">Gọi Ngay</span>
         </a>
         <a
-          href="https://zalo.me/0368113370"
+          href="https://zalo.me/0354596261"
           target="_blank"
           rel="noopener noreferrer"
           className="fab-btn fab-zalo"

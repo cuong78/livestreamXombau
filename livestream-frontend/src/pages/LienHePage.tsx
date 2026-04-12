@@ -9,12 +9,12 @@ function LienHePage() {
         <div className="header-content">
           <Link to="/" className="logo-link">
             <img
-              src="https://res.cloudinary.com/duklfdbqf/image/upload/v1770725136/a721f7b1-7da1-4feb-9b68-6f32af38d312_estzs6.png"
-              alt="Logo Gà Chọi Chú 5"
+              src="https://res.cloudinary.com/duklfdbqf/image/upload/v1775980884/z7717265863028_a76f1d37e4de786693f363c34c57843b_f7kiq3.jpg"
+              alt="Logo Gà Chọi Xóm Bầu"
               className="header-logo"
             />
             <div className="header-text">
-              <h1>Gà Chọi Chú 5</h1>
+              <h1>Gà Chọi Xóm Bầu</h1>
               <p className="header-subtitle">
                 Kích vào trang chủ để xem video trực tiếp
               </p>
@@ -46,12 +46,12 @@ function LienHePage() {
           <div className="contact-card hotline">
             <div className="card-icon">📞</div>
             <h2>Hotline / Zalo</h2>
-            <a href="tel:0368113370" className="phone-number">
-              0368113370
+            <a href="tel:0354596261" className="phone-number">
+              0354596261
             </a>
             <p>Gọi điện hoặc nhắn Zalo để được tư vấn nhanh nhất</p>
             <a
-              href="https://zalo.me/0368113370"
+              href="https://zalo.me/0354596261"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-contact btn-zalo"
@@ -64,7 +64,7 @@ function LienHePage() {
             <div className="card-icon">📍</div>
             <h2>Địa Chỉ</h2>
             <p className="address-text">
-              <strong>Ngọc Lâm, Hòa Mỹ Tây, Tây Hòa, Phú Yên</strong>
+              <strong>Thôn Mỹ Xuân 2, xã Hoà Thịnh, Tây Hoà, Phú Yên (Daklak mới)</strong>
             </p>
             <p>Anh em có thể đến trực tiếp xem gà và giao lưu</p>
             <a
@@ -96,7 +96,7 @@ function LienHePage() {
           <h2>🌐 Kết Nối Mạng Xã Hội</h2>
           <div className="social-grid">
             <a
-              href="https://zalo.me/0368113370"
+              href="https://zalo.me/0354596261"
               target="_blank"
               rel="noopener noreferrer"
               className="social-card zalo"
@@ -154,14 +154,14 @@ function LienHePage() {
           <div className="bank-card">
             <div className="bank-logo">🏦</div>
             <div className="bank-info">
-              <p className="bank-name">agribank</p>
-              <p className="account-number">4610205291500</p>
-              <p className="account-holder">LUU THI THU</p>
+              <p className="bank-name">Sacombank</p>
+              <p className="account-number">050127110287</p>
+              <p className="account-holder">Trần Thanh Phong</p>
             </div>
             <button
               className="btn-copy"
               onClick={() => {
-                navigator.clipboard.writeText("4610205291500");
+                navigator.clipboard.writeText("050127110287");
                 alert("Đã sao chép !");
               }}
             >
@@ -180,7 +180,7 @@ function LienHePage() {
             <div className="faq-item">
               <h3>Làm sao để mua gà?</h3>
               <p>
-                Anh em liên hệ trực tiếp qua Zalo 0368113370 để được tư vấn và
+                Anh em liên hệ trực tiếp qua Zalo 0354596261 để được tư vấn và
                 xem gà. Hỗ trợ giao gà đi các tỉnh.
               </p>
             </div>
@@ -213,8 +213,8 @@ function LienHePage() {
           <h2>Liên Hệ Ngay Hôm Nay!</h2>
           <p>Chúng tôi luôn sẵn sàng hỗ trợ anh em</p>
           <div className="cta-buttons">
-            <a href="tel:0368113370" className="btn-call">
-              📞 Gọi Ngay: 0368113370
+            <a href="tel:0354596261" className="btn-call">
+              📞 Gọi Ngay: 0354596261
             </a>
           </div>
         </section>
@@ -223,11 +223,11 @@ function LienHePage() {
       {/* Footer */}
       <footer className="page-footer">
         <p>
-          © 2025 Gà Chọi Chú 5 - Thôn Giai Sơn, An Mỹ, Tuy An, Phú
+          © 2025 Gà Chọi Xóm Bầu - Thôn Giai Sơn, An Mỹ, Tuy An, Phú
           Yên
         </p>
         <p>
-          Hotline/Zalo: <a href="tel:0368113370">0368113370</a>
+          Hotline/Zalo: <a href="tel:0354596261">0354596261</a>
         </p>
       </footer>
     </div>

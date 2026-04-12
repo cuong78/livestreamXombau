@@ -48,7 +48,7 @@ jobs:
         with:
           context: ./livestream-backend
           push: true
-          tags: ghcr.io/cuong78/livestreamchu5/livestream-backend:latest
+          tags: ghcr.io/cuong78/livestreamXombau/livestream-backend:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -57,13 +57,13 @@ jobs:
         with:
           context: ./livestream-frontend
           push: true
-          tags: ghcr.io/cuong78/livestreamchu5/livestream-frontend:latest
+          tags: ghcr.io/cuong78/livestreamXombau/livestream-frontend:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
           build-args: |
-            VITE_API_URL=https://gachoichu5.com/api
-            VITE_WS_URL=wss://gachoichu5.com/ws/chat
-            VITE_HLS_BASE_URL=https://gachoichu5.com/live
+            VITE_API_URL=https://gachoixombau.com/api
+            VITE_WS_URL=wss://gachoixombau.com/ws/chat
+            VITE_HLS_BASE_URL=https://gachoixombau.com/live
 
       - name: Deploy to VPS
         uses: appleboy/ssh-action@master
@@ -78,7 +78,7 @@ jobs:
             echo "${{ secrets.TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
             # Set environment variables for docker-compose
-            export DOCKER_REGISTRY=ghcr.io/cuong78/livestreamchu5
+            export DOCKER_REGISTRY=ghcr.io/cuong78/livestreamXombau
             export TAG=latest
 
             # Pull latest images

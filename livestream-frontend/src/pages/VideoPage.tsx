@@ -23,7 +23,7 @@ function VideoPage() {
       try {
         const response = await fetch(
           `${
-            import.meta.env.VITE_API_URL || "https://api.gachoichu5.com"
+            import.meta.env.VITE_API_URL || "https://api.gachoixombau.com"
           }/api/recordings`
         );
         if (response.ok) {
@@ -56,12 +56,12 @@ function VideoPage() {
         <div className="header-content">
           <Link to="/" className="logo-link">
             <img
-              src="https://res.cloudinary.com/duklfdbqf/image/upload/v1770725136/a721f7b1-7da1-4feb-9b68-6f32af38d312_estzs6.png"
-              alt="Logo Gà Chọi Chú 5"
+              src="https://res.cloudinary.com/duklfdbqf/image/upload/v1775980884/z7717265863028_a76f1d37e4de786693f363c34c57843b_f7kiq3.jpg"
+              alt="Logo Gà Chọi Xóm Bầu"
               className="header-logo"
             />
             <div className="header-text">
-              <h1>Gà Chọi Chú 5</h1>
+              <h1>Gà Chọi Xóm Bầu</h1>
               <p className="header-subtitle">
                 Kích vào trang chủ để xem video trực tiếp
               </p>
@@ -197,7 +197,7 @@ function VideoPage() {
           <p>Theo dõi kênh để nhận thông báo mỗi khi có livestream mới</p>
           <div className="cta-buttons">
             <a
-              href="https://zalo.me/0368113370"
+              href="https://zalo.me/0354596261"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-zalo"
@@ -219,11 +219,11 @@ function VideoPage() {
       {/* Footer */}
       <footer className="page-footer">
         <p>
-          © 2025 Gà Chọi Chú 5 - Thôn Giai Sơn, An Mỹ, Tuy An, Phú
+          © 2025 Gà Chọi Xóm Bầu - Thôn Giai Sơn, An Mỹ, Tuy An, Phú
           Yên
         </p>
         <p>
-          Hotline/Zalo: <a href="tel:0368113370">0368113370</a>
+          Hotline/Zalo: <a href="tel:0354596261">0354596261</a>
         </p>
       </footer>
     </div>

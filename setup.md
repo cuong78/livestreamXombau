@@ -67,7 +67,7 @@ Dự án của bạn bao gồm các thành phần chính:
 ## 🔑 Thông tin quan trọng
 
 - **VPS IP**: `76.13.212.30`
-- **Domain**: `gachoichu5.com`
+- **Domain**: `gachoixombau.com`
 - **GitHub Repository**: Cần thay `YOUR_USERNAME` trong các lệnh
 - **Docker Registry**: `ghcr.io/YOUR_USERNAME/livestream`
 
@@ -139,10 +139,10 @@ ufw enable
 
 ```bash
 # Cấu hình Nginx
-cat > /etc/nginx/sites-available/gachoichu5.com << 'EOF'
+cat > /etc/nginx/sites-available/gachoixombau.com << 'EOF'
 server {
     listen 80;
-    server_name gachoichu5.com www.gachoichu5.com;
+    server_name gachoixombau.com www.gachoixombau.com;
     
     location / {
         proxy_pass http://localhost:3000;
@@ -202,13 +202,13 @@ server {
 EOF
 
 # Kích hoạt cấu hình
-ln -sf /etc/nginx/sites-available/gachoichu5.com /etc/nginx/sites-enabled/
+ln -sf /etc/nginx/sites-available/gachoixombau.com /etc/nginx/sites-enabled/
 rm -f /etc/nginx/sites-enabled/default
 nginx -t
 systemctl restart nginx
 
 # Cài đặt SSL với Let's Encrypt
-certbot --nginx -d gachoichu5.com -d www.gachoichu5.com --non-interactive --agree-tos --email caoleanhcuong78@gmail.com
+certbot --nginx -d gachoixombau.com -d www.gachoixombau.com --non-interactive --agree-tos --email caoleanhcuong78@gmail.com
 ```
 
 ## Bước 3: Thiết lập CI/CD với GitHub Actions
@@ -239,23 +239,23 @@ SPRING_REDIS_PASSWORD=
 JWT_SECRET=3P0wg+kpO4PDbSP/DtcuFouxOjpKcCkVs5X1sbo8hXArKrsMURsN9FvSOIrokjlgGYDg3N8S0HoG4R9CesRQBA==
 JWT_EXPIRATION=86400000
 JWT_REFRESH_EXPIRATION=604800000
-CORS_ALLOWED_ORIGINS=https://gachoichu5.com
+CORS_ALLOWED_ORIGINS=https://gachoixombau.com
 
 # Stream Configuration
 STREAM_RTMP_URL=rtmp://srs:1935/live
-STREAM_HLS_BASE_URL=https://gachoichu5.com
+STREAM_HLS_BASE_URL=https://gachoixombau.com
 
 # Recording Configuration
 RECORDING_BASE_PATH=/recordings
 RECORDING_OUTPUT_PATH=/videos
-RECORDING_VIDEO_URL_BASE=https://gachoichu5.com/videos
-RECORDING_THUMBNAIL_URL_BASE=https://gachoichu5.com/videos/thumbnails
+RECORDING_VIDEO_URL_BASE=https://gachoixombau.com/videos
+RECORDING_THUMBNAIL_URL_BASE=https://gachoixombau.com/videos/thumbnails
 RECORDING_RETENTION_DAYS=3
 
 # Frontend Build Args 
-VITE_API_URL=https://gachoichu5.com/api
-VITE_WS_URL=wss://gachoichu5.com/ws/chat
-VITE_HLS_BASE_URL=https://gachoichu5.com/live
+VITE_API_URL=https://gachoixombau.com/api
+VITE_WS_URL=wss://gachoixombau.com/ws/chat
+VITE_HLS_BASE_URL=https://gachoixombau.com/live
 EOL
 ```
 
@@ -575,9 +575,9 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
           build-args: |
-            VITE_API_URL=https://gachoichu5.com/api
-            VITE_WS_URL=wss://gachoichu5.com/ws/chat
-            VITE_HLS_BASE_URL=https://gachoichu5.com/live
+            VITE_API_URL=https://gachoixombau.com/api
+            VITE_WS_URL=wss://gachoixombau.com/ws/chat
+            VITE_HLS_BASE_URL=https://gachoixombau.com/live
 
       - name: Deploy to VPS
         uses: appleboy/ssh-action@master
@@ -667,7 +667,7 @@ source .env
 set +a
 
 # Set biến cho docker-compose
-export DOCKER_REGISTRY=ghcr.io/cuong78/livestreamchu5  # Thay YOUR_USERNAME bằng username GitHub của bạn
+export DOCKER_REGISTRY=ghcr.io/cuong78/livestreamXombau  # Thay YOUR_USERNAME bằng username GitHub của bạn
 export TAG=latest
 
 # Login vào GitHub Container Registry (nếu repo private)
@@ -700,9 +700,9 @@ docker logs livestream-backend -f
 ```
 
 3. Kiểm tra website:
-   - Truy cập https://gachoichu5.com
-   - Kiểm tra API: https://gachoichu5.com/api/swagger-ui.html
-   - Kiểm tra health: https://gachoichu5.com/api/actuator/health
+   - Truy cập https://gachoixombau.com
+   - Kiểm tra API: https://gachoixombau.com/api/swagger-ui.html
+   - Kiểm tra health: https://gachoixombau.com/api/actuator/health
 
 4. Kiểm tra các service:
 ```bash
