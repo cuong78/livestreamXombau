@@ -667,7 +667,7 @@ source .env
 set +a
 
 # Set biến cho docker-compose
-export DOCKER_REGISTRY=ghcr.io/cuong78/livestreamXombau  # Thay YOUR_USERNAME bằng username GitHub của bạn
+export DOCKER_REGISTRY=ghcr.io/cuong78/livestreamxombau  # Thay YOUR_USERNAME bằng username GitHub của bạn
 export TAG=latest
 
 # Login vào GitHub Container Registry (nếu repo private)
