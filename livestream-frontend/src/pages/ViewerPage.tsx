@@ -155,7 +155,7 @@ const ViewerPage = () => {
   };
 
   const copyBankAccount = () => {
-    navigator.clipboard.writeText("0966689355");
+    navigator.clipboard.writeText("050127110287");
     alert("Đã sao chép !");
   };
 
