@@ -11,7 +11,7 @@ Nền tảng live streaming chuyên nghiệp, phát trực tiếp từ điện t
 
 ## 📋 Tổng quan dự án
 
-### Mô tả
+### Mô tảa
 
 - **Admin**: Đăng nhập, phát live từ điện thoại qua RTMP Publisher app, quản lý stream, xem chat real-time
 - **Khách**: Xem live không cần đăng nhập, bình luận với tên tùy chỉnh (lưu vào localStorage)
