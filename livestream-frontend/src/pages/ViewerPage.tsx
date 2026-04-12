@@ -6,7 +6,7 @@ import LoginModal from "@/components/LoginModal";
 import BlockedIpsModal from "@/components/BlockedIpsModal";
 import MatchScoreboard from "@/components/MatchScoreboard";
 import MatchInfoPanel from "@/components/MatchInfoPanel";
-import { streamApi, recordingApi } from "@/services/api";
+import api, { streamApi, recordingApi, authApi, checkTokenAndLogout } from "@/services/api";
 import { websocketService } from "@/services/websocket";
 import type { Stream, Comment, DailyRecording } from "@/types";
 import "./ViewerPage.css";
@@ -29,14 +29,19 @@ const ViewerPage = () => {
   const [selectedVideo, setSelectedVideo] = useState<DailyRecording | null>(
     null
   );
+  const [isMerging, setIsMerging] = useState(false);
 
   useEffect(() => {
-    // Check if admin already logged in
-    const token = localStorage.getItem("admin_token");
+    // Check if admin already logged in AND token is still valid
+    const isValid = checkTokenAndLogout();
     const user = localStorage.getItem("admin_user");
-    if (token && user) {
+    if (isValid && user) {
       setIsAdmin(true);
       setAdminUser(JSON.parse(user));
+    } else {
+      // Token expired or missing → ensure clean state
+      setIsAdmin(false);
+      setAdminUser(null);
     }
 
     // Fetch current stream
@@ -128,25 +133,17 @@ const ViewerPage = () => {
     if (!adminUser) return;
 
     try {
-      const response = await fetch(
-        `/api/admin/blocked-ips/block?ipAddress=${ipAddress}&reason=Admin blocked&adminUsername=${adminUser.username}`,
-        {
-          method: "POST",
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("admin_token")}`,
-            "Content-Type": "application/json",
-          },
-        }
+      const response = await api.post(
+        `/admin/blocked-ips/block?ipAddress=${ipAddress}&reason=Admin blocked&adminUsername=${adminUser.username}`
       );
 
-      if (response.ok) {
+      if (response.status === 200) {
         alert(`IP ${ipAddress} đã được chặn thành công!`);
-      } else {
-        const error = await response.json();
-        alert(`Lỗi: ${error.error || "Không thể chặn IP"}`);
       }
-    } catch (err) {
-      alert("Không thể kết nối đến server");
+    } catch (err: any) {
+      if (err.response?.status !== 401 && err.response?.status !== 403) {
+        alert("Không thể kết nối đến server");
+      }
     }
   };
 
@@ -167,16 +164,15 @@ const ViewerPage = () => {
     setShowLoginModal(false);
   };
 
-  const handleLogout = () => {
-    localStorage.removeItem("admin_token");
-    localStorage.removeItem("admin_user");
+  const handleLogout = async () => {
+    await authApi.logout();
     setIsAdmin(false);
     setAdminUser(null);
   };
 
   // Admin: Trigger merge for today's recordings
   const handleMergeToday = async () => {
-    if (!isAdmin) return;
+    if (!isAdmin || isMerging) return;
 
     const today = new Date().toISOString().split("T")[0]; // Format: yyyy-MM-dd
     const confirmMerge = window.confirm(
@@ -185,6 +181,7 @@ const ViewerPage = () => {
 
     if (!confirmMerge) return;
 
+    setIsMerging(true);
     try {
       const result = await recordingApi.triggerMerge(today);
       if (result.success) {
@@ -200,9 +197,13 @@ const ViewerPage = () => {
         alert("❌ " + result.message);
       }
     } catch (err: any) {
-      alert(
-        "❌ Lỗi: " + (err.response?.data?.message || "Không thể xử lý video")
-      );
+      if (err.response?.status !== 401 && err.response?.status !== 403) {
+        alert(
+          "❌ Lỗi: " + (err.response?.data?.message || "Không thể xử lý video")
+        );
+      }
+    } finally {
+      setIsMerging(false);
     }
   };
 
@@ -627,8 +628,9 @@ const ViewerPage = () => {
                 className="btn-upload-video"
                 onClick={handleMergeToday}
                 title="Upload video hôm nay lên hệ thống"
+                disabled={isMerging}
               >
-                📤 Upload Video Hôm Nay ({getCurrentDate()})
+                {isMerging ? "⏳ Đang xử lý..." : `📤 Upload Video Hôm Nay (${getCurrentDate()})`}
               </button>
             </div>
           )}
