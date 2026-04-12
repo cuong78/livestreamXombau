@@ -190,7 +190,7 @@ function QuyDinhPage() {
               ▶️ Xem Livestream Ngay
             </Link>
             <a
-              href="https://zalo.me/g/xaaxlh742"
+              href="https://zalo.me/g/lcmzzxtmu89k5wxkvdag"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-zalo"

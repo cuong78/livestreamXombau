@@ -470,7 +470,7 @@ const ViewerPage = () => {
               </a>
 
               <a
-                href="https://zalo.me/g/xaaxlh742"
+                href="https://zalo.me/g/lcmzzxtmu89k5wxkvdag"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-btn zalo-group"
@@ -483,7 +483,7 @@ const ViewerPage = () => {
               </a>
 
               <a
-                href="https://www.facebook.com/ut.phu.yen.bonsai"
+                href="https://www.facebook.com/ha.van.viet.584580"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-btn facebook"
@@ -813,7 +813,7 @@ const ViewerPage = () => {
               <p>📍 Thôn Mỹ Xuân 2, xã Hoà Thịnh, Tây Hoà, Phú Yên (Daklak mới)</p>
               <div className="social-links" style={{ marginTop: "15px" }}>
                 <a
-                  href="https://zalo.me/g/xaaxlh742"
+                  href="https://zalo.me/g/lcmzzxtmu89k5wxkvdag"
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
@@ -837,7 +837,7 @@ const ViewerPage = () => {
                   Nhóm Zalo VIP
                 </a>
                 <a
-                  href="https://www.facebook.com/ut.phu.yen.bonsai"
+                  href="https://www.facebook.com/ha.van.viet.584580"
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{ color: "#1877F2", textDecoration: "none" }}

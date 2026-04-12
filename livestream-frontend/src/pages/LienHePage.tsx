@@ -113,7 +113,7 @@ function LienHePage() {
             </a>
 
             <a
-              href="https://zalo.me/g/xaaxlh742"
+              href="https://zalo.me/g/lcmzzxtmu89k5wxkvdag"
               target="_blank"
               rel="noopener noreferrer"
               className="social-card zalo-group"
@@ -130,7 +130,7 @@ function LienHePage() {
             </a>
 
             <a
-              href="https://www.facebook.com/ut.phu.yen.bonsai"
+              href="https://www.facebook.com/ha.van.viet.584580"
               target="_blank"
               rel="noopener noreferrer"
               className="social-card facebook"
