@@ -12,6 +12,12 @@ services:
     networks:
       - livestream-network
     restart: always
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
 
   # Redis
   redis:
@@ -22,6 +28,12 @@ services:
     networks:
       - livestream-network
     restart: always
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
 
   # RTMP Server (SRS - Simple Realtime Server) v6
   srs:
@@ -44,7 +56,7 @@ services:
     image: ${DOCKER_REGISTRY}/livestream-backend:${TAG}
     container_name: livestream-backend
     ports:
-      - "8082:8080"
+      - "8080:8080"
     environment:
       SPRING_DATASOURCE_URL: ${SPRING_DATASOURCE_URL}
       SPRING_DATASOURCE_USERNAME: ${SPRING_DATASOURCE_USERNAME}
@@ -67,18 +79,26 @@ services:
       - recordings_data:/recordings
       - videos_data:/videos
     depends_on:
-      - postgres
-      - redis
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
     networks:
       - livestream-network
     restart: always
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8080/api/actuator/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 45s
 
   # React Frontend
   frontend:
     image: ${DOCKER_REGISTRY}/livestream-frontend:${TAG}
     container_name: livestream-frontend
     ports:
-      - "3001:80"
+      - "3000:80"
     depends_on:
       - backend
     networks:
