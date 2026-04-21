@@ -770,3 +770,10 @@ curl -X POST "http://localhost:8082/api/auth/register" \
     "password": "anhcuong",
     "email": "testuser1@example.com"
   }'
+
+
+# Xóa tất cả containers cũ
+docker rm -f $(docker ps -a | grep livestream | awk '{print $1}')
+
+# Sau đó start lại
+docker compose -f docker-compose.prod.yml up -d

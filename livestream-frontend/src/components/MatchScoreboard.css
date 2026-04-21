@@ -91,29 +91,8 @@
   white-space: nowrap;
 }
 
-/* LEGACY: Red color - commented out for future restoration
 .fighter-red .fighter-label {
   color: #ff4757;
-}
-*/
-
-.fighter-red .fighter-label {
-  color: #1e3a5f; /* Blue-black color */
-  font-weight: 700;
-  text-shadow:
-    -2px -2px 0 rgba(255, 255, 255, 1),
-    2px -2px 0 rgba(255, 255, 255, 1),
-    -2px 2px 0 rgba(255, 255, 255, 1),
-    2px 2px 0 rgba(255, 255, 255, 1),
-    -1px -1px 0 rgba(255, 255, 255, 1),
-    1px -1px 0 rgba(255, 255, 255, 1),
-    -1px 1px 0 rgba(255, 255, 255, 1),
-    1px 1px 0 rgba(255, 255, 255, 1),
-    0 0 8px rgba(255, 255, 255, 1),
-    0 0 12px rgba(255, 255, 255, 0.9),
-    0 0 16px rgba(255, 255, 255, 0.8);
-  -webkit-text-stroke: 2.5px rgba(255, 255, 255, 1);
-  paint-order: stroke fill;
 }
 
 .fighter-blue .fighter-label {
@@ -147,29 +126,8 @@
   white-space: nowrap;
 }
 
-/* LEGACY: Red color - commented out for future restoration
 .fighter-red .fighter-weight {
   color: #ff4757;
-}
-*/
-
-.fighter-red .fighter-weight {
-  color: #1e3a5f; /* Blue-black color */
-  font-weight: 700;
-  text-shadow:
-    -2px -2px 0 rgba(255, 255, 255, 1),
-    2px -2px 0 rgba(255, 255, 255, 1),
-    -2px 2px 0 rgba(255, 255, 255, 1),
-    2px 2px 0 rgba(255, 255, 255, 1),
-    -1px -1px 0 rgba(255, 255, 255, 1),
-    1px -1px 0 rgba(255, 255, 255, 1),
-    -1px 1px 0 rgba(255, 255, 255, 1),
-    1px 1px 0 rgba(255, 255, 255, 1),
-    0 0 10px rgba(255, 255, 255, 1),
-    0 0 14px rgba(255, 255, 255, 0.9),
-    0 0 18px rgba(255, 255, 255, 0.8);
-  -webkit-text-stroke: 3px rgba(255, 255, 255, 1);
-  paint-order: stroke fill;
 }
 
 .fighter-blue .fighter-weight {
